@@ -25,6 +25,7 @@
     "lodash": "^4.17.4",
     "node-usb-barcode-scanner": "^1.0.1",
     "prompt": "^1.0.0",
+    "pusher": "^1.5.1",
     "terminal-kit": "^1.14.3"
   }
 }
