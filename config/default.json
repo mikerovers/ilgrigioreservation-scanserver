@@ -1,0 +1,14 @@
+{
+    "Common": {
+        "host": "http://ilgrigioreservation.mike",
+        "api_key": "",
+        "vendor_id": 1155,
+        "pusher": {
+            "appId": "464305",
+            "key": "c08a48edcfcca1cbafea",
+            "secret": "08d7199560cde013b032",
+            "cluster": "eu",
+            "encrypted": true
+        }
+    }
+}
