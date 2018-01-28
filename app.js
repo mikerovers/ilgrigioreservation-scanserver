@@ -16,12 +16,13 @@ if(options.lookup) {
     lookup();
 }
 
+let pusherConfig = config.get('Common.pusher');
 let pusher = new Pusher({
-    appId: '464305',
-    key: 'c08a48edcfcca1cbafea',
-    secret: '08d7199560cde013b032',
-    cluster: 'eu',
-    encrypted: true
+    appId: pusherConfig.appId,
+    key: pusherConfig.key,
+    secret: pusherConfig.secret,
+    cluster: pusherConfig.cluster,
+    encrypted: pusherConfig.encrypted   
 });
 
 try {   
