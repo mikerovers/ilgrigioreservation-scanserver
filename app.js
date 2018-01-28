@@ -22,7 +22,7 @@ let pusher = new Pusher({
     key: pusherConfig.key,
     secret: pusherConfig.secret,
     cluster: pusherConfig.cluster,
-    encrypted: pusherConfig.encrypted   
+    encrypted: pusherConfig.encrypted
 });
 
 try {   
@@ -32,8 +32,8 @@ try {
     });
     scanner.on("data", function(code){
         console.log("recieved code : " + code);
-        pusher.trigger('my-channel', 'my-event', {
-            'message': code
+        pusher.trigger('scanning', `scan-${config.get('Common.name')}`, {
+            'code': code
         });
     });
 } catch(e) {

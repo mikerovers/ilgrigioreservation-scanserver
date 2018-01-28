@@ -3,6 +3,7 @@
         "host": "http://ilgrigioreservation.mike",
         "api_key": "",
         "vendor_id": 1155,
+        "name": "kassa-1",
         "pusher": {
             "appId": "464305",
             "key": "c08a48edcfcca1cbafea",
