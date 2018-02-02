@@ -25,13 +25,14 @@ let pusher = new Pusher({
     encrypted: pusherConfig.encrypted
 });
 
-try {   
+try {
     let scanner = new usbScanner({
         vendorId: config.get('Common.vendor_id'),
         hidMap: {30: '1', 31: '2', 32: '3', 33: '4',34: '5',35: '6', 36: '7', 37: '8', 38: '9',39: '0',40: 'e'}
     });
+    console.log("scanner activated.");
     scanner.on("data", function(code){
-        console.log("recieved code : " + code);
+        console.log(`received code: ${code}`);
         pusher.trigger('scanning', `scan-${config.get('Common.name')}`, {
             'code': code
         });
